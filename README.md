@@ -1,6 +1,11 @@
 # nodecustomersdb
 A secure RESTful API built with Node.js and Express for performing CRUD operations on customer data, featuring JWT authentication and PostgreSQL integration.
 
+## System Overview
+This project is a secure RESTful API for managing customer data. It uses Express for routing, PostgreSQL for persistent storage, and JWT for authentication. The API exposes endpoints for CRUD operations on customers, protected by authentication middleware. Automated tests ensure endpoint reliability.
+
+![System Architecture](diagram.png)
+
 ## What each file does
 ### index.js
 This file loads environment variables, requires all necessary modules, initializes the Express app, enables JSON parsing for incoming requests, sets the local port, defines all API routes (including authentication and customer CRUD operations), starts the server, and exports the app for testing or external use.
