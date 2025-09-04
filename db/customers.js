@@ -7,7 +7,7 @@ const getAllCustomers = (req, res) => {
       console.error(err);
     else
       res.json(result.rows)
-  })
+  });
 }
 
 // Add new customer
@@ -59,7 +59,7 @@ const deleteCustomer = (req, res) => {
     if (err) {
       return console.error('Error executing query', err.stack)
     }
-  })
+  });
 
   res.status(204).end();
 }
@@ -77,7 +77,7 @@ const updateCustomer = (req, res) => {
     if (err) {
       return console.error('Error executing query', err.stack)
     }
-  })
+  });
 
   res.json(editedCustomer);
 }
