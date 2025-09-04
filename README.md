@@ -19,5 +19,6 @@ This file requires the PostgreSQL library (pg), loads environment variables, and
 Provides database handler functions for the users table, similar to how customers.js does for the customers table. Its functions are used for user login and authentication processes.
 
 ### services/authenticate.js
+This file requires the authentication (jsonwebtoken) and hashing (bcrypt) libraries, as well as the user database handler. It defines the login and authenticate functions for handling user login and token-based authentication, and exports them for use in index.js to secure API routes. For more details read the doc comments in file.
 
 ### test/customer.js
