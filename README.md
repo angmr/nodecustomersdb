@@ -4,7 +4,7 @@ A secure RESTful API built with Node.js and Express for performing CRUD operatio
 ## System Overview
 This project is a secure RESTful API for managing customer data. It uses Express for routing, PostgreSQL for persistent storage, and JWT for authentication. The API exposes endpoints for CRUD operations on customers, protected by authentication middleware. Automated tests ensure endpoint reliability.
 
-![System Architecture](diagram.png)
+![System Architecture](app-flow-diagram.png)
 
 ## What each file does
 ### index.js
