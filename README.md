@@ -22,3 +22,4 @@ Provides database handler functions for the users table, similar to how customer
 This file requires the authentication (jsonwebtoken) and hashing (bcrypt) libraries, as well as the user database handler. It defines the login and authenticate functions for handling user login and token-based authentication, and exports them for use in index.js to secure API routes. For more details read the doc comments in file.
 
 ### test/customer.js
+This file sets up automated tests for the API endpoints using Mocha as the test runner, along with the Chai and Chai-HTTP libraries for assertions and HTTP requests. It imports the Express app, defines a test customer, and includes tests for the POST and GET /api/customers endpoints. The tests verify response status codes and the structure of the returned data. The tests interact with the actual database (so running them will add test data).
