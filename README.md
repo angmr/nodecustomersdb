@@ -7,7 +7,7 @@ This project is a secure RESTful API for managing customer data. It uses Express
 ![System Architecture](app-flow-diagram.png)
 
 ## API Endpoints
-Note: Note: All endpoints (except `/login`) require a valid JWT to be provided in the `Authorization` header.
+Note: All endpoints (except `/login`) require a valid JWT to be provided in the `Authorization` header.
 
 | Route                | HTTP Method | Description              |
 |----------------------|-------------|--------------------------|
