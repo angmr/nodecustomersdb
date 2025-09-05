@@ -6,6 +6,23 @@ This project is a secure RESTful API for managing customer data. It uses Express
 
 ![System Architecture](app-flow-diagram.png)
 
+## API Endpoints
+Note: Note: All endpoints (except `/login`) require a valid JWT to be provided in the `Authorization` header.
+
+| Route                | HTTP Method | Description              |
+|----------------------|-------------|--------------------------|
+| `/login`             | POST        | User login (returns JWT) |
+| `/api/customers`     | GET         | Fetch all customers      |
+| `/api/customers/:id` | GET         | Fetch customer by ID     |
+| `/api/customers`     | POST        | Add a new customer       |
+| `/api/customers/:id` | DELETE      | Delete a customer by ID  |
+| `/api/customers/:id` | PUT         | Update a customer by ID  |
+
+### Error Handling
+- **401 Unauthorized:** Returned if the JWT is missing or invalid.
+- **400 Bad Request:** Returned for invalid input data, such as incorrect email or password during login.
+- **404 Not Found:** Returned if the requested resource (e.g., customer with the specified ID) does not exist.
+
 ## What each file does
 ### index.js
 This file loads environment variables, requires all necessary modules, initializes the Express app, enables JSON parsing for incoming requests, sets the local port, defines all API routes (including authentication and customer CRUD operations), starts the server, and exports the app for testing or external use.
