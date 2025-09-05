@@ -29,10 +29,7 @@ const login = (req, res) => {
     // If password match, send the token
     if (bcrypt.compareSync(password, hashpwd))
       res.send({token});
-    else
-      res.sendStatus(400).end();
-    }
-    else {
+    } else {
       res.sendStatus(400).end();
     }
   });
@@ -52,17 +49,17 @@ const login = (req, res) => {
  * The JWT should be provided in the Authorization header.
  */
 const authenticate = (req, res, next) => {
-    const token = req.header('Authorization');
-    if(!token) {
-        res.sendStatus(400).end();
-    }
+  const token = req.header('Authorization');
+  if(!token) {
+      res.sendStatus(401).end();
+  }
 
-    // Verify the received token
+  // Verify the received token
   jwt.verify(token, process.env.SECRET_KEY, (err, decoded) => {
     if (err)
-     res.sendStatus(400).end();
-   else
-     next();
+    res.sendStatus(401).end();
+  else
+    next();
   }); 
 }
 
